@@ -5,10 +5,12 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="520.0" prefWidth="797.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.2" fx:controller="com.example.teszt.HelloController">
+<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="520.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.teszt.HelloController">
    <MenuBar fx:id="menu" maxWidth="1.7976931348623157E308" prefHeight="22.0" prefWidth="790.0">
      <menus>
        <Menu mnemonicParsing="false" text="Bejelentkezés">
@@ -27,11 +29,32 @@
          </items>
        </Menu>
      </menus>
-   </MenuBar>
-   <TextField fx:id="search" alignment="CENTER" promptText="Keresés" />
-   <Button fx:id="button" alignment="TOP_CENTER" mnemonicParsing="false" text="Told neki">
       <VBox.margin>
          <Insets />
+      </VBox.margin>
+   </MenuBar>
+   <TableView fx:id="Tables" VBox.vgrow="SOMETIMES">
+     <columns>
+         <TableColumn maxWidth="-Infinity" minWidth="-Infinity" prefWidth="-1.0" text="id" />
+       <TableColumn prefWidth="82.0" text="name" />
+       <TableColumn prefWidth="61.0" text="price" />
+         <TableColumn prefWidth="75.0" text="currency" />
+         <TableColumn prefWidth="75.0" text="calories" />
+         <TableColumn prefWidth="75.0" text="image_url" />
+         <TableColumn prefWidth="75.0" text="desciption" />
+         <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="-1.0" text="stars" />
+     </columns>
+      <VBox.margin>
+         <Insets right="250.0" />
+      </VBox.margin>
+   </TableView>
+   <TextField fx:id="search" alignment="CENTER" promptText="Keresés">
+      <VBox.margin>
+         <Insets left="600.0" top="440.0" />
+      </VBox.margin></TextField>
+   <Button fx:id="button" alignment="TOP_CENTER" mnemonicParsing="false" text="Told neki">
+      <VBox.margin>
+         <Insets left="600.0" />
       </VBox.margin>
    </Button>
 </VBox>
